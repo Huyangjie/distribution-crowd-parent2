@@ -6,14 +6,14 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author Leon
- * @create 2022-05-10 1:25
+ * @create 2022-05-10 1:10
  * IntelliJ IDEA
  * cn.leon
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class MainClass {
+public class MainClassRedis {
     public static void main(String[] args){
-        SpringApplication.run(MainClass.class, args);
+        SpringApplication.run(MainClassRedis.class, args);
     }
 }

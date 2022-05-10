@@ -156,11 +156,11 @@
             </dependency>
 
             <!-- httpclient -->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
                 <version>${httpclient.version}</version>
-            </dependency>
+            </dependency>-->
 
             <!-- 热部署 -->
             <dependency>
@@ -332,9 +332,18 @@
                 <artifactId>fastjson</artifactId>
                 <version>1.2.15</version>
             </dependency>
-            <!-- <dependency> <groupId>org.apache.httpcomponents</groupId> <artifactId>httpclient</artifactId>
-                <version>4.2.1</version> </dependency> <dependency> <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpcore</artifactId> <version>4.2.1</version> </dependency> -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.4.1</version>
+<!--                <version>4.2.1</version>-->
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+<!--                <version>4.2.1</version>-->
+                <version>4.4.1</version>
+            </dependency>
             <dependency>
                 <groupId>commons-lang</groupId>
                 <artifactId>commons-lang</artifactId>
@@ -352,6 +361,12 @@
                 <scope>test</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.18</version>
+                <scope>provided</scope>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
