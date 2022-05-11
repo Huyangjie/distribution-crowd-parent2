@@ -11,6 +11,6 @@ eureka:
       defaultZone: http://localhost:1000/eureka/
   instance:
     prefer-ip-address: true
-#logging:
-#  level:
-#    cn.leon.controller: debug
+logging:
+  level:
+    cn.leon.controller: debug

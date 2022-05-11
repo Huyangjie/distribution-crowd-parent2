@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 public class VerificationCode {
-    public void sendCode(String phone,String code) {
+    public static void sendCode(String phone,String code) {
 
 
         String host = "https://gyytz.market.alicloudapi.com";
@@ -27,7 +27,8 @@ public class VerificationCode {
         headers.put("Authorization", "APPCODE " + appcode);
         Map<String, String> querys = new HashMap<String, String>();
         querys.put("mobile", phone);
-        querys.put("param", "**code**:"+code+",minute**:5");
+        querys.put("param", code+",5");
+//        querys.put("param", "**code**:12345,**minute**:5");
         querys.put("smsSignId", "2e65b1bb3d054466b82f0c9d125465e2");
         querys.put("templateId", "908e94ccf08b4476ba6c876d13f084ad");
         Map<String, String> bodys = new HashMap<String, String>();
@@ -51,6 +52,7 @@ public class VerificationCode {
             e.printStackTrace();
         }
 
+
     }
     /*
      * 读取返回结果
@@ -65,5 +67,9 @@ public class VerificationCode {
         }
         br.close();
         return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        VerificationCode.sendCode("18037344370","373843");
     }
 }

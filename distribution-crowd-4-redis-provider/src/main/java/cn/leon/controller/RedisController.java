@@ -5,7 +5,6 @@ import cn.leon.utils.CrowdUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -51,7 +50,7 @@ public class RedisController {
     }
 
     @GetMapping("/redis/getvalue")
-    public ResultEntity getValue(@RequestParam("redisKey") String redisKey){
+    public ResultEntity<String> getValue(@RequestParam("redisKey") String redisKey){
         if (!CrowdUtils.stringEffectiveCheck(redisKey)){
             return ResultEntity.faildWithOutData("格式不正确");
         }
@@ -68,7 +67,7 @@ public class RedisController {
 
 
     @GetMapping("/redis/removekey")
-    public ResultEntity removeKey(@RequestParam("redisKey") String redisKey){
+    public ResultEntity<String> removeKey(@RequestParam("redisKey") String redisKey){
         if (!CrowdUtils.stringEffectiveCheck(redisKey)){
             return ResultEntity.faildWithOutData("格式不正确");
         }

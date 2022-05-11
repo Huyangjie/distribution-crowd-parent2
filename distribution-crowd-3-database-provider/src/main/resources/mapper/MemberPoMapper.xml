@@ -106,11 +106,11 @@
     </if>
   </delete>
   <insert id="insert" parameterType="cn.leon.entity.MemberPo" >
-    insert into t_member (id, loginacct, userpswd, 
+    insert into t_member (loginacct, userpswd,
       username, email, authstatus, 
       usertype, realname, cardnum, 
       accttype)
-    values (#{id,jdbcType=INTEGER}, #{loginacct,jdbcType=VARCHAR}, #{userpswd,jdbcType=CHAR}, 
+    values (#{loginacct,jdbcType=VARCHAR}, #{userpswd,jdbcType=CHAR},
       #{username,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{authstatus,jdbcType=TINYINT}, 
       #{usertype,jdbcType=TINYINT}, #{realname,jdbcType=VARCHAR}, #{cardnum,jdbcType=VARCHAR}, 
       #{accttype,jdbcType=TINYINT})
